@@ -9,7 +9,6 @@ export const IDIOMAS = [
   { codigo: 'pt-BR', nome: 'Português', locale: 'pt-BR', dicionario: null },
   { codigo: 'en', nome: 'English', locale: 'en-US', dicionario: en },
   { codigo: 'zh-CN', nome: '简体中文', locale: 'zh-CN', dicionario: zhCN },
- 
 ];
 
 const CHAVE_GUARDADA = 'enshrouded-save-editor:idioma';
@@ -34,7 +33,7 @@ export const localeAtual = () => IDIOMAS.find((i) => i.codigo === atual)?.locale
 // Nome de item e de habilidade não é traduzido aqui: o jogo já traz os dois, e `data/items.json`
 // guarda `pt` e `en` por item. Isto diz de qual campo ler. Um idioma que não seja português cai no
 // inglês, porque é a outra localização que temos — o README avisa.
-export const campoDeNome = () => (atual === 'pt-BR' ? 'pt' : 'en');
+export const campoDeNome = () => (atual === 'pt-BR' ? 'pt' : atual === 'zh-CN' ? 'zh' : 'en');
 
 // o `lang` do documento guia leitor de tela, hifenização e correção ortográfica dos campos
 function marcarNoDocumento() {

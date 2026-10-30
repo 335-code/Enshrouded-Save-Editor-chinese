@@ -3,10 +3,13 @@
 // chave. Como contribuir com um idioma está no README.
 
 import en from './i18n/en.json';
+import zhCN from './i18n/zh-CN.json';
 
 export const IDIOMAS = [
   { codigo: 'pt-BR', nome: 'Português', locale: 'pt-BR', dicionario: null },
   { codigo: 'en', nome: 'English', locale: 'en-US', dicionario: en },
+  { codigo: 'zh-CN', nome: '简体中文', locale: 'zh-CN', dicionario: zhCN },
+ 
 ];
 
 const CHAVE_GUARDADA = 'enshrouded-save-editor:idioma';
